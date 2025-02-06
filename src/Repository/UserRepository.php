@@ -18,7 +18,7 @@ class UserRepository extends ServiceEntityRepository
     private EntityManagerInterface $em;
 
     public function __construct(
-        ManagerRegistry $registry,
+        ManagerRegistry        $registry,
         EntityManagerInterface $em
     )
     {

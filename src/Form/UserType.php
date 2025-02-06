@@ -20,7 +20,7 @@ class UserType extends AbstractType
             ->add('firstName', TextType::class, [
                 'label' => 'First Name',
                 'required' => true,
-                'attr'  => [
+                'attr' => [
                     'class' => 'form-control',
                     'maxlength' => 20
                 ]
@@ -28,7 +28,7 @@ class UserType extends AbstractType
             ->add('lastName', TextType::class, [
                 'label' => 'Last Name',
                 'required' => true,
-                'attr'  => [
+                'attr' => [
                     'class' => 'form-control',
                     'maxlength' => 60
                 ]
@@ -36,7 +36,7 @@ class UserType extends AbstractType
             ->add('email', TextType::class, [
                 'label' => 'Email',
                 'required' => true,
-                'attr'  => [
+                'attr' => [
                     'class' => 'form-control',
                     'maxlength' => 100
                 ]
@@ -44,7 +44,7 @@ class UserType extends AbstractType
             ->add('phone', TextType::class, [
                 'label' => 'Phone',
                 'required' => true,
-                'attr'  => [
+                'attr' => [
                     'class' => 'form-control',
                     'maxlength' => 12
                 ]
@@ -74,7 +74,7 @@ class UserType extends AbstractType
 
         $builder->add('save', SubmitType::class, [
             'label' => 'Save',
-            'attr'  => [
+            'attr' => [
                 'class' => 'btn btn-primary'
             ]
         ]);

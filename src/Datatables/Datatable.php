@@ -6,10 +6,10 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class Datatable
 {
-    protected ?int                   $firstRecord;
-    protected ?string                $search      = null;
-    protected ?int                   $recordsCount;
-    protected ?array                 $orderColumn = null;
+    protected ?int $firstRecord;
+    protected ?string $search = null;
+    protected ?int $recordsCount;
+    protected ?array $orderColumn = null;
     protected EntityManagerInterface $em;
 
     public function __construct(
@@ -29,7 +29,7 @@ class Datatable
         if (!is_null($request->get('order')) && isset($request->get('order')[0])) {
             $this->orderColumn = [
                 'column' => $columns[$request->get('order')[0]['column']]['data'],
-                'dir'    => $request->get('order')[0]['dir']
+                'dir' => $request->get('order')[0]['dir']
             ];
         }
 

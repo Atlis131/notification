@@ -25,10 +25,10 @@ class User
     #[ORM\Column(type: 'string', length: 12, nullable: false)]
     private string $phone;
 
-    #[ORM\Column(type: 'boolean',options: ['default' => false])]
+    #[ORM\Column(type: 'boolean', options: ['default' => false])]
     private ?bool $isEmailSubscribed = false;
 
-    #[ORM\Column(type: 'boolean',options: ['default' => false])]
+    #[ORM\Column(type: 'boolean', options: ['default' => false])]
     private ?bool $isSmsSubscribed = false;
 
     public function getId(): int
