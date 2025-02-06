@@ -34,9 +34,31 @@
             },
             {
                 "data": "isEmailSubscribed",
+                'render': function (data) {
+                    let html = "";
+
+                    if (data === 'Yes') {
+                        html += '<span class="btn-success btn"> {{ 'Yes' }} </span>';
+                    } else {
+                        html += '<span class="btn-danger btn">{{ 'No' }} </span>';
+                    }
+
+                    return html;
+                }
             },
             {
                 "data": "isSmsSubscribed",
+                'render': function (data) {
+                    let html = "";
+
+                    if (data === 'Yes') {
+                        html += '<span class="btn-success btn"> {{ 'Yes' }} </span>';
+                    } else {
+                        html += '<span class="btn-danger btn">{{ 'No' }} </span>';
+                    }
+
+                    return html;
+                }
             },
             {
                 "data": "actions",
