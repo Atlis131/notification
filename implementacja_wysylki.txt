@@ -1,0 +1,14 @@
+Implementacja wysyłki:
+
+1. Utworzenie dodatkowej tabeli - powiadomienia (tresc powiadomienia, typ(email/sms), status(do wyslania, wyslana, bląd), data podjecia, data zakonczenia, info o błędzie).
+2. Utworzenie komendy CRON pobierającej z bazy powiadomienia do wysyłki, zabezpieczenie komendy przed wielokrotnym uruchomieniem (symfony lock)
+3. Obsłużenie dwóch scenariuszy:
+	a) Wysyłka maili
+		- Pobranie użytkowników z włączoną subskrypcją maili
+		- Wysłanie do nich mailowo powiadomienia przy użyciu Symfony Mailer
+	b) Wysyłka SMS
+		- Pobranie użytkowników z włączoną subskrypcją sms
+		- Wysłanie do nich smsowo powiadomienia przy użyciu integracji np z SMSApi
+4. Po wyslaniu powiadomienia zmiana jego statusu na wysłane
+5. Obsłużenie błędów w obu scenariuszach, dodanie informacji o błędzue w przypadku jego wystąpienia
+6. Dodanie od strony frontendu widoku powiadomien (zawartość tabeli powiadomienia w czytelnej formie) z opcją ponowienia w przypadku wystąpienia błędu
